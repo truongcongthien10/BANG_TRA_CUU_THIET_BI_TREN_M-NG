@@ -7,17 +7,32 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 30px 20px;
             background-color: #f4f6f9;
             color: #333;
         }
-        .table-container {
+        .main-container {
             width: 100%;
             max-width: 1100px;
             margin: 0 auto;
+        }
+        /* Tiêu đề chính của trang */
+        .page-header {
+            text-align: center;
+            background-color: #1a5276;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            margin: 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .table-container {
             background: #fff;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            border-radius: 8px;
+            border-radius: 0 0 8px 8px;
             overflow: hidden;
         }
         table {
@@ -31,11 +46,12 @@
             vertical-align: middle;
         }
         th {
-            background-color: #1f618d;
+            background-color: #2471a3;
             color: #fff;
-            font-size: 16px;
+            font-size: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            text-align: center;
         }
         tr:nth-child(even) {
             background-color: #f8fafc;
@@ -56,9 +72,6 @@
         }
         .device-list li {
             margin-bottom: 6px;
-        }
-        .device-list li:last-child {
-            margin-bottom: 0;
         }
         /* Cột 2 & 3: Hình ảnh & Manual */
         .col-image, .col-manual {
@@ -84,40 +97,39 @@
 </head>
 <body>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Tên Thiết Bị</th>
-                    <th>Hình Ảnh Thiết Bị</th>
-                    <th>Manual (Thông Số Kỹ Thuật)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dòng cho Van Bướm -->
-                <tr>
-                    <td class="col-device">
-                        <ul class="device-list">
-                            <li>Van bướm (Butterfly valve)</li>
-                        </ul>
-                    </td>
-                    <td class="col-image">
-                        <!-- Thay đường dẫn src bên dưới bằng file ảnh van của anh -->
-                        <img src="butterfly-valve.jpg" alt="Van bướm (Butterfly valve)" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Hinh+Anh+Van+Buom'">
-                    </td>
-                    <td class="col-manual">
-                        <div class="manual-gallery">
-                            <!-- Thay đường dẫn src bằng file ảnh thông số/manual của anh -->
-                            <img src="butterfly-valve-manual-1.jpg" alt="Manual trang 1" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Manual+Thong+So+1'">
-                            <!-- Anh có thể nhân bản thẻ <img> nếu có nhiều trang ảnh manual -->
-                        </div>
-                    </td>
-                </tr>
+    <div class="main-container">
+        <!-- TIÊU ĐỀ BẢNG / CHƯƠNG TRÌNH -->
+        <h1 class="page-header">DANH MỤC THIẾT BỊ VÀ THÔNG SỐ KỸ THUẬT</h1>
 
-                <!-- Anh có thể chèn thêm dòng thiết bị khác bên dưới tại đây -->
-
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên Thiết Bị</th>
+                        <th>Hình Ảnh Thiết Bị</th>
+                        <th>Manual (Thông Số Kỹ Thuật)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dòng Van Bướm -->
+                    <tr>
+                        <td class="col-device">
+                            <ul class="device-list">
+                                <li>Van bướm (Butterfly valve)</li>
+                            </ul>
+                        </td>
+                        <td class="col-image">
+                            <img src="butterfly-valve.jpg" alt="Van bướm (Butterfly valve)" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Hinh+Anh+Van+Buom'">
+                        </td>
+                        <td class="col-manual">
+                            <div class="manual-gallery">
+                                <img src="butterfly-valve-manual-1.jpg" alt="Manual trang 1" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Manual+Thong+So+1'">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
