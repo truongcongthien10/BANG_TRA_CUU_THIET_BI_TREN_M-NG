@@ -2,153 +2,81 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BANG_TRA_CUU_THIET_BI_TREN_M-NG</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        /* Phần Tiêu đề chính */
-        .title-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .main-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 0 0 8px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .subtitle {
-            font-size: 13px;
-            color: #333333;
-            margin: 0;
-        }
-
-        /* Cấu trúc Bảng vẽ viền chuẩn như nét vẽ */
-        .table-container {
-            width: 100%;
-            margin-top: 15px;
-        }
-
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+        .subtitle { font-size: 13px; color: #555; margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 8px; }
+        
+        /* BẢNG BẮT BUỘC HIỂN THỊ VIỀN ĐEN */
         table {
             width: 100%;
             border-collapse: collapse;
-            border: 2px solid #000000; /* Viền ngoài màu đen đậm */
+            border: 2px solid #000;
         }
-
         th, td {
-            border: 1.5px solid #000000; /* Viền trong màu đen */
+            border: 1.5px solid #000;
             padding: 10px;
+            text-align: left;
             vertical-align: top;
         }
-
-        /* Phân chia tỉ lệ 3 cột theo đúng bản vẽ */
-        .col-1 {
-            width: 20%; /* Cột hẹp chứa text tên thiết bị */
-            font-size: 14px;
-        }
-
-        .col-2 {
-            width: 40%; /* Cột rộng chứa hình ảnh thiết bị */
-            text-align: center;
-        }
-
-        .col-3 {
-            width: 40%; /* Cột rộng chứa hình ảnh Manual */
-            text-align: center;
-        }
-
-        /* Thẻ danh sách cột 1 */
-        ul.device-list {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        ul.device-list li {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        /* Khung hiển thị hình ảnh */
-        .img-container {
-            width: 100%;
-            min-height: 150px;
+        th { background-color: #f2f2f2; text-align: center; font-weight: bold; }
+        
+        /* Kích thước 3 cột */
+        .col-1 { width: 25%; }
+        .col-2 { width: 37.5%; text-align: center; }
+        .col-3 { width: 37.5%; text-align: center; }
+        
+        .box-placeholder {
+            min-height: 120px;
+            border: 1px dashed #aaa;
+            background: #fafafa;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            max-height: 250px;
-            object-fit: contain;
+            color: #888;
+            font-size: 13px;
         }
     </style>
 </head>
 <body>
 
-    <div class="title-container">
-        <h1 class="main-title">BANG_TRA_CUU_THIET_BI_TREN_M-NG</h1>
-        <p class="subtitle">Bảng tra cứu các tài sản trên mạng cấp nước</p>
-    </div>
+    <div class="title">BANG_TRA_CUU_THIET_BI_TREN_M-NG</div>
+    <div class="subtitle">Bảng tra cứu các tài sản trên mạng cấp nước</div>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="col-1">Tên thiết bị</th>
-                    <th class="col-2">Hình ảnh</th>
-                    <th class="col-3">Manual</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dòng 1: Van bướm -->
-                <tr>
-                    <td class="col-1">
-                        <ul class="device-list">
-                            <li>Van bướm (Butterfly valve)</li>
-                        </ul>
-                    </td>
-                    <td class="col-2">
-                        <div class="img-container">
-                            <!-- Chèn đường dẫn ảnh thiết bị vào src="..." bên dưới -->
-                            <img src="butterfly-valve.jpg" alt="Van bướm" onerror="this.style.display='none';">
-                        </div>
-                    </td>
-                    <td class="col-3">
-                        <div class="img-container">
-                            <!-- Chèn đường dẫn ảnh manual vào src="..." bên dưới -->
-                            <img src="butterfly-valve-manual.jpg" alt="Manual van bướm" onerror="this.style.display='none';">
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- Dòng 2: Mẫu trống để chèn thêm thiết bị tiếp theo -->
-                <tr>
-                    <td class="col-1">
-                        <ul class="device-list">
-                            <li></li>
-                        </ul>
-                    </td>
-                    <td class="col-2">
-                        <div class="img-container"></div>
-                    </td>
-                    <td class="col-3">
-                        <div class="img-container"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-1">Tên thiết bị</th>
+                <th class="col-2">Hình ảnh</th>
+                <th class="col-3">Manual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-1">
+                    <ul>
+                        <li>Van bướm (Butterfly valve)</li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <div class="box-placeholder">[ Khung đính hình ảnh ]</div>
+                </td>
+                <td class="col-3">
+                    <div class="box-placeholder">[ Khung đính Manual ]</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-1">
+                    <ul>
+                        <li>...</li>
+                    </ul>
+                </td>
+                <td class="col-2"><div class="box-placeholder">[ Khung đính hình ảnh ]</div></td>
+                <td class="col-3"><div class="box-placeholder">[ Khung đính Manual ]</div></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
