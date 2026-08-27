@@ -3,133 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh Mục Thiết Bị & Tài Liệu Kỹ Thuật</title>
+    <title>BANG_TRA_CUU_THIET_BI_TREN_M-NG</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 30px 20px;
-            background-color: #f4f6f9;
-            color: #333;
+            margin: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
-        .main-container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
+
+        .header-container {
+            margin-bottom: 20px;
         }
-        /* Tiêu đề chính của trang */
-        .page-header {
-            text-align: center;
-            background-color: #1a5276;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 8px 8px 0 0;
-            margin: 0;
+
+        .title {
             font-size: 22px;
+            font-weight: bold;
+            color: #0f172a;
+            margin: 0 0 6px 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 8px;
         }
+
+        .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Định dạng Bảng */
         .table-container {
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            border-radius: 0 0 8px 8px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             overflow: hidden;
+            border: 1px solid #cbd5e1;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            text-align: left;
         }
-        th, td {
-            border: 1px solid #dcdfe6;
+
+        th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
             padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            font-size: 15px;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
             vertical-align: middle;
         }
-        th {
-            background-color: #2471a3;
-            color: #fff;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
+
         tr:nth-child(even) {
             background-color: #f8fafc;
         }
-        tr:hover {
-            background-color: #f1f5f9;
-        }
-        /* Cột 1: Tên thiết bị */
-        .col-device {
+
+        /* Phân chia kích thước 3 cột */
+        .col-text {
             width: 30%;
-            font-weight: bold;
-            color: #1a5276;
             font-size: 15px;
+            line-height: 1.5;
         }
-        .device-list {
-            margin: 0;
-            padding-left: 18px;
-        }
-        .device-list li {
-            margin-bottom: 6px;
-        }
-        /* Cột 2 & 3: Hình ảnh & Manual */
+
         .col-image, .col-manual {
             width: 35%;
             text-align: center;
         }
-        .img-preview {
-            max-width: 100%;
-            height: auto;
-            max-height: 200px;
+
+        /* Khung chứa ảnh thiết lập sẵn kích thước */
+        .img-box {
+            width: 100%;
+            max-width: 250px;
+            height: 160px;
+            margin: 0 auto;
+            border: 2px dashed #cbd5e1;
             border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
-        .manual-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
+
+        .placeholder-text {
+            color: #94a3b8;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        ul.device-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        ul.device-list li {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #1e293b;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <!-- TIÊU ĐỀ BẢNG / CHƯƠNG TRÌNH -->
-        <h1 class="page-header">DANH MỤC THIẾT BỊ VÀ THÔNG SỐ KỸ THUẬT</h1>
+    <div class="header-container">
+        <h1 class="title">BANG_TRA_CUU_THIET_BI_TREN_M-NG</h1>
+        <p class="subtitle">Bảng tra cứu các tài sản trên mạng cấp nước</p>
+    </div>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tên Thiết Bị</th>
-                        <th>Hình Ảnh Thiết Bị</th>
-                        <th>Manual (Thông Số Kỹ Thuật)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Dòng Van Bướm -->
-                    <tr>
-                        <td class="col-device">
-                            <ul class="device-list">
-                                <li>Van bướm (Butterfly valve)</li>
-                            </ul>
-                        </td>
-                        <td class="col-image">
-                            <img src="butterfly-valve.jpg" alt="Van bướm (Butterfly valve)" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Hinh+Anh+Van+Buom'">
-                        </td>
-                        <td class="col-manual">
-                            <div class="manual-gallery">
-                                <img src="butterfly-valve-manual-1.jpg" alt="Manual trang 1" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Manual+Thong+So+1'">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Thiết Bị (Text)</th>
+                    <th>Hình Ảnh Thiết Bị (Image)</th>
+                    <th>Manual - Thông Số Kỹ Thuật (Image)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- DÒNG 1: Van bướm -->
+                <tr>
+                    <td class="col-text">
+                        <ul class="device-list">
+                            <li>Van bướm (Butterfly valve)</li>
+                        </ul>
+                    </td>
+                    <td class="col-image">
+                        <div class="img-box">
+                            <!-- Chèn đường dẫn ảnh vào src="..." -->
+                            <img src="butterfly-valve.jpg" alt="Hình ảnh Van Bướm" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="placeholder-text" style="display:none;">[Khung hình ảnh thiết bị]</span>
+                        </div>
+                    </td>
+                    <td class="col-manual">
+                        <div class="img-box">
+                            <!-- Chèn đường dẫn ảnh manual vào src="..." -->
+                            <img src="butterfly-valve-manual.jpg" alt="Manual Van Bướm" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="placeholder-text" style="display:none;">[Khung hình ảnh Manual]</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- DÒNG 2: Mẫu khung trống để đưa thêm thiết bị tiếp theo -->
+                <tr>
+                    <td class="col-text">
+                        <ul class="device-list">
+                            <li>...</li>
+                        </ul>
+                    </td>
+                    <td class="col-image">
+                        <div class="img-box">
+                            <span class="placeholder-text">[Khung hình ảnh thiết bị]</span>
+                        </div>
+                    </td>
+                    <td class="col-manual">
+                        <div class="img-box">
+                            <span class="placeholder-text">[Khung hình ảnh Manual]</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
