@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục Thiết Bị & Tài Liệu Kỹ Thuật</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .table-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            border: 1px solid #dcdfe6;
+            padding: 12px 15px;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #1f618d;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        /* Cột 1: Tên thiết bị */
+        .col-device {
+            width: 30%;
+            font-weight: bold;
+            color: #1a5276;
+            font-size: 15px;
+        }
+        .device-list {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .device-list li {
+            margin-bottom: 6px;
+        }
+        .device-list li:last-child {
+            margin-bottom: 0;
+        }
+        /* Cột 2 & 3: Hình ảnh & Manual */
+        .col-image, .col-manual {
+            width: 35%;
+            text-align: center;
+        }
+        .img-preview {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            object-fit: contain;
+        }
+        .manual-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Thiết Bị</th>
+                    <th>Hình Ảnh Thiết Bị</th>
+                    <th>Manual (Thông Số Kỹ Thuật)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dòng cho Van Bướm -->
+                <tr>
+                    <td class="col-device">
+                        <ul class="device-list">
+                            <li>Van bướm (Butterfly valve)</li>
+                        </ul>
+                    </td>
+                    <td class="col-image">
+                        <!-- Thay đường dẫn src bên dưới bằng file ảnh van của anh -->
+                        <img src="butterfly-valve.jpg" alt="Van bướm (Butterfly valve)" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Hinh+Anh+Van+Buom'">
+                    </td>
+                    <td class="col-manual">
+                        <div class="manual-gallery">
+                            <!-- Thay đường dẫn src bằng file ảnh thông số/manual của anh -->
+                            <img src="butterfly-valve-manual-1.jpg" alt="Manual trang 1" class="img-preview" onerror="this.src='https://via.placeholder.com/250x180?text=Manual+Thong+So+1'">
+                            <!-- Anh có thể nhân bản thẻ <img> nếu có nhiều trang ảnh manual -->
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Anh có thể chèn thêm dòng thiết bị khác bên dưới tại đây -->
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
