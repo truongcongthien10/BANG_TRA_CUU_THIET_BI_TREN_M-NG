@@ -22,11 +22,19 @@
         }
         th { background-color: #f2f2f2; text-align: center; font-weight: bold; }
         
-        /* Kích thước 3 cột */
-        .col-1 { width: 25%; }
-        .col-2 { width: 37.5%; text-align: center; }
-        .col-3 { width: 37.5%; text-align: center; }
-        
+        /* Kích thước các cột */
+        .col-1 { width: 15%; vertical-align: middle; }
+        .col-2 { width: 42.5%; text-align: center; padding: 0; } /* Bỏ padding để hình hiển thị sát mép */
+        .col-3 { width: 42.5%; text-align: center; padding: 0; }
+
+        /* Tối ưu hình ảnh hiển thị full khung và giữ tỉ lệ */
+        .img-full {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
         .box-placeholder {
             min-height: 120px;
             border: 1px dashed #aaa;
@@ -36,6 +44,7 @@
             justify-content: center;
             color: #888;
             font-size: 13px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -56,20 +65,22 @@
             <tr>
                 <td class="col-1">
                     <ul>
-                        <li>Van bướm (Butterfly valve)</li>
+                        <li><b>Van bướm</b><br>(Butterfly valve)</li>
                     </ul>
                 </td>
                 <td class="col-2">
-                    <div class="box-placeholder">[ Khung đính hình ảnh ]</div>
+                    <!-- Thay hinh-anh-van.png bằng đường dẫn hình 1 -->
+                    <img src="hinh-anh-van.png" alt="Manual Eurostop Butterfly Valve" class="img-full">
                 </td>
                 <td class="col-3">
-                    <div class="box-placeholder">[ Khung đính Manual ]</div>
+                    <!-- Thay manual-thong-so.png bằng đường dẫn hình 2 -->
+                    <img src="manual-thong-so.png" alt="Bảng thông số PFA 10 bar" class="img-full">
                 </td>
             </tr>
             <tr>
                 <td class="col-1">
                     <ul>
-                        <li>...</li>
+                        <li>Thiết bị khác...</li>
                     </ul>
                 </td>
                 <td class="col-2"><div class="box-placeholder">[ Khung đính hình ảnh ]</div></td>
